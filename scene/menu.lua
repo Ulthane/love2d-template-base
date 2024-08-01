@@ -15,6 +15,7 @@ local Panel = require('GUI/panel')
 local Text = require('GUI/text')
 local Button = require('GUI/button')
 local Events = require('events/events')
+local KeyboardManager = require('engine/keyboard_manager')
 
 
 -- CLASS MENU
@@ -33,6 +34,7 @@ function Menu:new(sceneManager)
 end
 
 function Menu:load()
+
     -- Précharge la scène par défaut pour hériter de ses paramètres
     Scene.load(self)
 
@@ -60,7 +62,7 @@ function Menu:load()
     self.GUI:addElement(btnOptions)
     self.GUI:addElement(btnQuit)
 
-    print("Menu chargé")
+    print("Menu loaded")
 end
 
 function Menu:unload()

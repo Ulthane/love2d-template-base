@@ -1,9 +1,10 @@
 -- Import
-local sceneManager = require('engine/scene_manager')
-SceneManager = sceneManager:new()
+SceneManager = require('engine/scene_manager'):new()
+KeyboardManager = require('engine/keyboard_manager'):new()
 
 -- Fonction de chargement avant jeu
 function love.load()
+    KeyboardManager:init()
     SceneManager.currentScene:load()
 end
 

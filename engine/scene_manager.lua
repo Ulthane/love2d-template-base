@@ -9,7 +9,8 @@ function SceneManager:new()
     local instance = {}
     setmetatable(instance, {__index = SceneManager})
 
-    instance.currentScene = Gameplay:new()
+    -- instance.currentScene = Gameplay:new()
+    instance.currentScene = Menu:new()
 
     return instance
 end
